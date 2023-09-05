@@ -21,9 +21,14 @@ namespace ViewInjection.Views
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var view = _container.Resolve<ViewA>();
+            var viewA = _container.Resolve<ViewA>();
             IRegion region = _regionManager.Regions["ContentRegion"];
-            region.Add(view);
+            region.Add(viewA);
+
+            //Activating another view
+            var viewB = _container.Resolve<ViewB>();
+            region.Add(viewB);
+            region.Activate(viewB);
         }
     }
 }
