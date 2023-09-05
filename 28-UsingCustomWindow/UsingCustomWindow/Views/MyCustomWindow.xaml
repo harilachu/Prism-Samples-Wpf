@@ -5,5 +5,5 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UsingCustomWindow.Views"
         mc:Ignorable="d"
-        Title="MyCustomWindow" Background="Azure" SizeToContent="WidthAndHeight">
+        Title="MyCustomWindow" Background="Red" SizeToContent="WidthAndHeight">
 </Window>
