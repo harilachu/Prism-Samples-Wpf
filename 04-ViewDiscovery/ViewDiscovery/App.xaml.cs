@@ -1,6 +1,8 @@
 ﻿using Prism.Ioc;
+using Prism.Regions;
 using Prism.Unity;
 using System.Windows;
+using System.Windows.Controls;
 using ViewDiscovery.Views;
 
 namespace ViewDiscovery
@@ -18,6 +20,12 @@ namespace ViewDiscovery
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
+        }
+
+        protected override void ConfigureRegionAdapterMappings(RegionAdapterMappings regionAdapterMappings)
+        {
+            base.ConfigureRegionAdapterMappings(regionAdapterMappings);
+            regionAdapterMappings.RegisterMapping(typeof(StackPanel), Container.Resolve<StackPanelRegionAdapter>());
         }
     }
 }
